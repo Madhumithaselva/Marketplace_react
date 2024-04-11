@@ -1,13 +1,10 @@
 import React from 'react'
-import Header,{Nav} from "./Header";
+import Header from "./Header";
 import AdList from './Adlist';
 
  function App() {
 
-    const logo="logo.jpg";
-    const links=["Login","Sign Up","About"];
-
-    const advertisementsData = [
+      const advertisementsData = [
       {
         title: "Ad 1",
         description: "This is the first advertisement.",
@@ -49,7 +46,7 @@ import AdList from './Adlist';
     return (
 
         <div className="App">
-          <Nav links={links} logo={logo}/>
+          <Header/>
             <div className='container-fluid bg-danger text-white text-left fs-4 p-5 py-5'>Marketplace UI!</div>
             <AdList adList={advertisementsData}/>
         </div>
