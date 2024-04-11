@@ -4,7 +4,7 @@ export default class Header extends Component {
   render() {
     return (
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand" href="./logo.jpg">
             <img src="./logo.jpg" alt="Logo" ></img>
             </a>
