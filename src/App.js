@@ -1,35 +1,16 @@
-import React from 'react';
-import Header,{Nav} from './Header';
+import React, { Component } from 'react'
+import Header from "./Header";
 
-const App = () => {
+ class App extends Component {
+  render() {
+    return (
 
-  const headerText = "Marketplace UI!";
-  const pagePrimaryColor = "info";
-  const logo= "logo.jpg";
-  const links=["Login","Sign Up","About"];
-
-  return (
-    <div className="App">
-      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div className='container fluid'>
-        <a className='navbar-brand' href="/logo">
-          <img src={logo} width={75} alt={logo}/>
-        </a>
-        <div className='collapse navbar-collapse' id="collapsibleNavbar">
-          <ul className='navbar-nav ml-auto'>
-            {links.map((link,key)=>(
-              <li className='nav-item' key={key}>
-                <a className='nav-link' href={'/${link.toLowerCase()}'}>
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-          </div>
-          </div>
-          </nav>
-          <Header text={headerText} bgColor={pagePrimaryColor}/>
-    </div>
-  );
+        <div>
+            <Header/>
+            <div className='container-fluid bg-danger text-white text-left fs-4 p-5 py-5'>Marketplace UI!</div>
+        </div>
+        
+    )
+  }
 }
 export default App;

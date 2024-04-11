@@ -1,49 +1,29 @@
-import React from 'react';
-import './Nav.css'
+import React, { Component } from 'react'
 
-const Header = (props) => {
+export default class Header extends Component {
+  render() {
     return (
-        <header className={`container-fluid bg-${props.bgColor ? props.bgColor : "secondary"} text-white py-5 mb-2`}>
-            <h2>{props.text && props.text}</h2>
-            <h2>{!props.text && "Default Header Text"}</h2>
-        </header>
-    );
-};
-
-export const Nav = (props) => {
-
-    //Destructuring
-    const { logo, links } = props;
-
-
-    return (
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="/logo">
-                    <img src={logo} width={75} alt={logo} />
-                </a>
-
-                <div className="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul className="navbar-nav ml-auto">
-                        {
-                            links.map((link,key) => {
-                                const liElement =
-                                    <li className="nav-item" key={key}>
-                                        <a className="nav-link" href={'/${link.toLowerCase()}'}>
-                                            {link}
-                                        </a>
-                                    </li>;
-                                return liElement;
-                            })
-                        }
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+        <div class="container">
+          <a class="navbar-brand" href="#">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    )
+  }
 }
-
-export default Header;
-
-
