@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
-import Header from "./Header";
+import Header,{Nav} from "./Header";
 
- class App extends Component {
-  render() {
+ function App() {
+
+    const logo="logo.jpg";
+    const links=["Login","Sign Up","About"];
+
     return (
 
         <div>
-            <Header/>
+          <Nav links={links} logo={logo}/>
             <div className='container-fluid bg-danger text-white text-left fs-4 p-5 py-5'>Marketplace UI!</div>
         </div>
         
-    )
+    );
   }
-}
 export default App;
